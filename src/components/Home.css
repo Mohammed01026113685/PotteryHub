@@ -1,0 +1,155 @@
+/* Home.css */
+
+body {
+    font-family: 'Cairo', sans-serif; /* استخدم خط عربي أنيق */
+    background-color: #b8930f;    color: #333; /* لون النص */
+    margin: 0;
+    padding: 0;
+}
+
+.bg{
+    background-image: url('./images/home/pgg\ \(1\)\ \(2\).png');
+    background-size:cover; /* تغطي الخلفية كامل الصفحة */
+    background-position: center; /* مركزة في المنتصف */
+    background-repeat: no-repeat; /* لا تكرر الخلفية */
+    height: 100vh;
+
+}
+.home-container {
+    max-width: 1200px; /* عرض محدد */
+    margin: auto; /* توسيط المحتوى */
+    padding: 20px; /* مساحة داخلية */
+    color: #4b7b8b;
+}
+.welcome-message{
+    font-size: 1.5em; /* حجم النص */
+    color: #73afc4; /* لون أخضر يعكس الطبيعة */
+    text-align: center; /* توسيط النص */
+    margin: 20px 0; /* هوامش */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top:80px ;
+    font-family: 'Scheherazade', serif;
+    
+}
+.welcome-message h1 {
+    font-weight: bolder;
+    font-style: italic;
+    font-size: 2.5em; /* حجم النص */
+}
+.welcome-message b {
+    font-weight: bolder;
+    font-style: italic;
+    box-shadow: 0 8px 8px rgba(123, 121, 121, 0.1); /* تأثير ظل */
+    color: #333;
+    font-size:1.5em; /* حجم النص */
+
+}
+
+.section {
+    border-radius: 8px; /* زوايا دائرية */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* تأثير ظل */
+    padding: 20px; /* مساحة داخلية */
+    margin: 15px 0; /* هوامش بين الأقسام */
+    transition: transform 0.3s, opacity 0.3s; /* تأثيرات عند الظهور */
+    opacity: 0; /* إخفاء القسم عند التحميل */
+}
+
+.section.visible {
+    opacity: 1; /* إظهار القسم */
+    transform: translateY(0); /* إرجاع الموقع */
+}
+
+h2 {
+    font-size: 1.8em; /* حجم عنوان القسم */
+    color: #2c5e3e; /* لون غامق مستلهم من الطبيعة */
+    margin-bottom: 10px; /* مساحة أسفل العنوان */
+}
+
+
+
+p {
+    line-height: 1.5; /* تباعد الأسطر */
+    margin: 10px 0; /* هوامش فوق وتحت الفقرات */
+}
+ul{
+    color: #c65437;
+    line-height: 2; /* تباعد الأسطر */
+}
+/* تأثيرات للناف بار */
+nav {
+    padding: 15px; /* مساحة داخلية للناف بار */
+    border-radius: 5px; /* زوايا دائرية */
+}
+
+nav ul {
+    list-style: none; /* إخفاء العلامات */
+    padding: 0; /* إلغاء الحشو */
+    display: flex; /* وضع العناصر في سطر */
+    justify-content: space-around; /* توزيع العناصر بشكل متساوٍ */
+}
+
+nav a {
+    text-decoration: none; /* إلغاء التسطير */
+    font-weight: bold; /* جعل النص غامق */
+}
+
+nav a:hover {
+    text-decoration: underline; /* تأثير عند التمرير على الروابط */
+}
+
+/* تأثيرات على الصورة */
+img {
+    max-width: 100%; /* تأكد من أن الصورة ملائمة */
+    height: auto; /* الحفاظ على النسبة */
+    border-radius: 8px; /* زوايا دائرية للصورة */
+    margin: 20px 0; /* هوامش فوق وتحت الصورة */
+}
+.home-section{
+    margin-top: 370px;
+}
+/* Home.css */
+.section-courses{
+    opacity:none; ;
+  }
+  .course-details {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+    border: 1px solid #ddd;
+    text-align: center;
+  }
+  
+  .courses-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .course-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* تأثير ظل */
+
+    
+  }
+  a{
+    text-decoration: none;
+  }
+  .course-card h3{
+    color: #2c5e3e;
+  }
+  .course-card:hover {
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* تأثير ظل */
+    cursor: pointer;
+  }
+
+  

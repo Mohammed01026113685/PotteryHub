@@ -1,0 +1,39 @@
+body {
+    font-family: 'Cairo', sans-serif;
+        padding: 0;
+    background-color: #EAE7DC;
+    text-align: right;
+    direction: rtl;
+    /* background-image: url('./images/home/pgg\ \(1\)\ \(2\).png'); */
+
+  
+}
+.logo{
+  height: 70px;
+  width:90px;
+}
+.navbar {
+    color: white;
+    padding: 10px;
+    height: 80px;
+  }
+  
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  h1 {
+    color: #333;
+  }
+  
