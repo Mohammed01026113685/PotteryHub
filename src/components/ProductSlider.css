@@ -1,0 +1,31 @@
+.product-slider-container {
+    max-width: 400px;
+    margin: 0 auto; /* توسيط السلايدر */
+    padding: 20px;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    color: #D2691E;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.carousel .control-arrow {
+    background: #D2691E; /* تغيير لون السهام */
+}
+
+.carousel .carousel-status {
+    display: none; /* إخفاء حالة السلايدر */
+}
+
+@media (max-width: 768px) {
+    .product-slider-container {
+        width: 100%;
+    }
+}

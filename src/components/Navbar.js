@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import "../components/styles.css";
-import logo from "./images/home/logo.png";
+import logo from "./images/home/Pottery Hub logo with a transparent background.png";
 
 const Navbar = () => {
   return (

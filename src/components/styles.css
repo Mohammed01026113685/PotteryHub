@@ -1,39 +1,126 @@
 body {
-    font-family: 'Cairo', sans-serif;
-        padding: 0;
-    background-color: #EAE7DC;
-    text-align: right;
-    direction: rtl;
-    /* background-image: url('./images/home/pgg\ \(1\)\ \(2\).png'); */
-
-  
+  font-family: 'Cairo', sans-serif;
+  padding: 0;
+  background-color: #EAE7DC;
+  text-align: right;
+  direction: rtl;
+  margin: 0; /* إزالة الهامش الافتراضي */
 }
-.logo{
-  height: 70px;
-  width:90px;
+
+.logo {
+  height: 50px;
+  width: 50px;
+}
+.nav{
+  height: 50px;
 }
 .navbar {
-    color: white;
-    padding: 10px;
-    height: 80px;
+  color: #FFFFFF; /* لون النص أبيض */
+  height: 60px;
+  padding: 10px; /* إضافة بعض الحشو */
+  display: flex;
+  justify-content: space-between; /* توزيع العناصر في الناف بار */
+  align-items: center; /* محاذاة العناصر في الوسط */
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex; /* جعل العناصر في سطر */
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+h1 {
+  color: #333;
+}
+
+nav a {
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 2px solid transparent; /* خط تحت الرابط */
+}
+
+nav a:hover {
+  color: #ed6409; /* تغيير لون النص عند التمرير */
+  border-bottom: 2px solid #ed6409; /* تغيير لون الخط السفلي */
+}
+
+/* استعلامات الوسائط للشاشات المتوسطة */
+@media (max-width: 1200px) {
+  .navbar {
+      padding: 5px; /* تقليل المساحة في الشاشات المتوسطة */
+  }
+  nav{
+    margin-top: -20px;
   }
   
-  nav ul {
-    list-style-type: none;
-    padding: 0;
+  .logo {
+      height: 40px;
+      width: 40px;
   }
-  
+
   nav ul li {
-    display: inline;
-    margin-right: 20px;
+      margin-right: 15px;
   }
-  
+}
+
+/* استعلامات الوسائط للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column; /* جعل الناف بار عموديًا */
+      height: auto; /* ضبط الارتفاع تلقائيًا */
+      text-align: center; /* محاذاة العناصر في الوسط */
+  }
+  .container{
+    height: auto;
+  }
+  .nav{
+    height: 20px;
+  }
+  nav ul {
+      flex-direction: column; /* جعل القائمة عمودية */
+  }
+
+  nav ul li {
+      margin-right: 0;
+      margin-bottom: 10px; /* إضافة مساحة بين الروابط */
+  }
+
+  .logo {
+      height: 35px;
+      width: 35px;
+  }
+
   nav ul li a {
-    color: white;
-    text-decoration: none;
+      font-size: 1.2em; /* تكبير النص قليلاً */
   }
-  
-  h1 {
-    color: #333;
+}
+
+/* استعلامات الوسائط للشاشات الصغيرة جدًا */
+@media (max-width: 480px) {
+  .navbar {
+      padding: 5px;
+      height: auto;
   }
-  
+
+  .logo {
+      height: 30px;
+      width: 30px;
+  }
+
+  nav ul li a {
+      font-size: 1em; /* تقليل حجم النص للشاشات الصغيرة جدًا */
+  }
+
+  nav ul {
+      margin: 0;
+  }
+}

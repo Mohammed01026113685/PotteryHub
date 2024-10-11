@@ -7,6 +7,7 @@ import img1 from './images/home/1.png';
 import img2 from './images/home/2.png';
 import img3 from './images/home/3.png';
 import CoursesList from './CoursesList';
+import ServicesSection from './ServicesSection';
 
 const Home = () => {
   const sectionRefs = useRef([]);
@@ -47,13 +48,13 @@ const Home = () => {
     },
     {
       id: 2,
-      name: 'مزهرية حديثة',
+      name: 'صحن زخرفي ',
       price: '150 EGP',
       image: img2
     },
     {
       id: 3,
-      name: 'صحن زخرفي',
+      name: ' مزهرية حديثة',
       price: '120 EGP',
       image: img3
     }
@@ -93,12 +94,8 @@ const courses = [
           <ProductsList products={products} /> {/* استدعاء مكون ProductsList */}
         </section>
       </div>
-      {/* عرض الكورسات */}
-      <section className="section-courses" ref={el => sectionRefs.current[1] = el}>
-          <h2>الكورسات المقدمة في تطوير صناعة الفخار</h2>
-          <CoursesList courses={courses} /> {/* استدعاء مكون CoursesList */}
-        </section>
-      <section className="section" ref={el => sectionRefs.current[1] = el}>
+    <ServicesSection/>
+    <section >
           <h2>ماذا نقدم؟</h2>
           <ul>
             <li>منصة شاملة: نحن نقدم منصة رقمية متكاملة تجمع بين الحرفيين، المستهلكين، والمستثمرين...</li>
@@ -107,6 +104,12 @@ const courses = [
             <li>تعاون مع مؤسسات سياحية: بالتعاون مع المؤسسات السياحية في الأقصر وأسوان...</li>
           </ul>
         </section>
+      {/* عرض الكورسات */}
+      <section className="section-courses" ref={el => sectionRefs.current[1] = el}>
+          <h2>الكورسات المقدمة في تطوير صناعة الفخار</h2>
+          <CoursesList courses={courses} /> {/* استدعاء مكون CoursesList */}
+        </section>
+      
 
         <section className="section" ref={el => sectionRefs.current[2] = el}>
           <h2>التنمية المستدامة في صناعة الفخار</h2>
