@@ -1,13 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import "../components/styles.css";
+import "../components/css/styles.css"; // تأكد من أن المسار صحيح
 import logo from "./images/home/Pottery Hub logo with a transparent background.png";
 
 const Navbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light">
-      <div className="container">
-        <Link className="navbar-brand" to="/"> <img className="logo" src={logo} alt="logo" /></Link>
+    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <div className="container-fluid">
+        <Link className="navbar-brand" to="/"> 
+          <img className="logo" src={logo} alt="Pottery Hub logo" />
+        </Link>
         <button
           className="navbar-toggler"
           type="button"

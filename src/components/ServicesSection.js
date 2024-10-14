@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // استيراد Link
-import './ServicesSection.css';
+import '../components/css/ServicesSection.css';
 
 const ServicesSection = () => {
   return (

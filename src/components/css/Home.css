@@ -1,0 +1,247 @@
+/* القواعد الأساسية */
+body {
+    font-family: 'Cairo', sans-serif;
+    
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.bg {
+    background-image: url('../images/home/pgg (1) (2).png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.home-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    color: #8B4513;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-message {
+    margin-top: 290px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+
+.title {
+    color: #FFFFFF;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    font-size: 45px;
+    font-weight: bolder;
+    margin-top: 50px;
+}
+
+.welcome-message h1 {
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.welcome-message b {
+    font-weight: bolder;
+    font-style: italic;
+    box-shadow: 0 8px 8px rgba(123, 121, 121, 0.1);
+    color: #db6d1f;
+    font-size: 1.5em;
+}
+
+/* أقسام المحتوى */
+.home-section-u {
+    margin-top: 300px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 250px; /* تعديل الارتفاع ليكون تلقائي */
+    overflow: hidden;
+
+}
+
+.image4 {
+    height: 150px;
+    margin-top: -100px;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    height: auto; /* تعديل الارتفاع ليكون تلقائي */
+    flex-wrap: nowrap; /* السماح للعناصر بالالتفاف في الشاشات الصغيرة */
+}
+
+.image-container img {
+    width: 100%; /* تأكد من أن الصورة تملأ الحاوية بالكامل */
+    height: auto; /* الحفاظ على تناسب الصورة */
+    max-width: 400px; /* تحديد الحد الأقصى للعرض */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.content-li {
+    margin-bottom: 200px;
+}
+
+.section {
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 15px 0;
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 0;
+    transform: translateY(30px);
+    width: 100%;
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+nav {
+    padding: 15px;
+    border-radius: 5px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* استعلامات الوسائط للشاشات المتوسطة */
+@media (max-width: 1200px) {
+    .welcome-message {
+        margin-top: 150px;
+    }
+
+    .welcome-message h1 {
+        font-size: 1.8em;
+    }
+    
+    .title {
+        font-size: 2.5em;
+    }
+    
+    .content-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* استعلامات الوسائط للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .welcome-message {
+        margin-top: 100px;
+    }
+
+    .welcome-message h1 {
+        font-size: 1.5em;
+        margin-top: 30px;
+    }
+    
+    .title {
+        font-size: 2em;
+        margin-top: 10px;
+    }
+    .welcome-message{
+        font-size: 18px;
+        margin-top: 50px;
+    }
+    .home-section-u{
+        margin-top: 100px;
+    }
+    .image4{
+        margin-top: -170px;
+    }
+    .bg {
+        height: 50vh;
+    }
+
+    .content-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-container img {
+        max-width: 90%;
+    }
+}
+
+/* استعلامات الوسائط للشاشات الصغيرة جدًا */
+@media (max-width: 480px) {
+    .welcome-message {
+        margin-top: 165px;
+        font-size: 18px;
+    }
+
+    .welcome-message h1 {
+        font-size: 1.2em;
+        margin-top: auto;
+    }
+
+
+    .bg {
+        height: 40vh;
+    }
+
+    .title {
+        font-size: 1.8em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        margin-bottom: 10px;
+    }
+    
+    .image-container img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+    .home-section-u{
+        margin-top: 80px;
+        padding: 10px;
+        height: auto;
+        justify-content: center;
+    }
+}
+@media (max-width: 376px){
+    .welcome-message{
+        font-size: 16px;
+        margin-top: 100px;
+    }
+    .welcome-message h1{
+        font-size: 1em;
+    }
+    .home-section-u{
+        margin-top: 50px;
+    }
+
+}

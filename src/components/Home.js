@@ -1,13 +1,25 @@
 // Home.js
 import React, { useEffect, useRef } from 'react';
 import WelcomeMessage from './WelcomeMessage';
-import ProductsList from './ProductsList'; // استدعاء مكون ProductsList
-import './Home.css';
+import ProductsSection from './sections/ProductsSection';
+import SustainabilitySection from './sections/SustainabilitySection';
+import InnovationSection from './sections/InnovationSection';
+import SuccessStoriesSection from './sections/SuccessStoriesSection';
+import ChallengesSection from './sections/ChallengesSection';
+import ServicesSection from './ServicesSection';
+import { ToastContainer } from 'react-toastify';
+import { toast, Slide } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import '../components/css/Home.css';
+import '../components/css/ProductCard.css';
+
 import img1 from './images/home/1.png';
 import img2 from './images/home/2.png';
 import img3 from './images/home/3.png';
-import CoursesList from './CoursesList';
-import ServicesSection from './ServicesSection';
+import img4 from './images/home/tanmea mostdama.webp';
+import img5 from './images/home/33.png';
+import img6 from './images/home/22.png';
+import img7 from './images/home/54.jpeg';
 
 const Home = () => {
   const sectionRefs = useRef([]);
@@ -38,121 +50,65 @@ const Home = () => {
     };
   }, []);
 
-  // قائمة المنتجات
   const products = [
-    {
-      id: 1,
-      name: 'فخار تقليدي',
-      price: '100 EGP',
-      image: img1
-    },
-    {
-      id: 2,
-      name: 'صحن زخرفي ',
-      price: '150 EGP',
-      image: img2
-    },
-    {
-      id: 3,
-      name: ' مزهرية حديثة',
-      price: '120 EGP',
-      image: img3
-    }
+    { id: 1, name: 'فخار تقليدي', price: '100 EGP', description: 'فخار يدوي تقليدي بجودة عالية.', image: img1 },
+    { id: 2, name: 'صحن زخرفي', price: '150 EGP', description: 'صحن مصنوع يدوياً بتصميم زخرفي فريد.', image: img2 },
+    { id: 3, name: 'مزهرية حديثة', price: '120 EGP', description: 'مزهرية حديثة مصممة لتناسب أي ديكور.', image: img3 },
+    { id: 4, name: 'فنجان قهوة', price: '80 EGP', description: 'فنجان قهوة يدوي بطابع فخاري مميز.', image: img5 },
+    { id: 5, name: 'طقم حلل فخاري', price: '90 EGP', description: '٢٢ قطعة متنوعة ومختلفة من الفخار.', image: img6 },
+    { id: 6, name: 'طبق فخاري', price: '110 EGP', description: 'طبق فخاري مصنوع يدوياً مع لمسات تقليدية.', image: img7 },
   ];
-// قائمة الكورسات
-const courses = [
-  {
-    id: 1,
-    title: 'دورة صناعة الفخار التقليدية',
-    description: 'تعلم كيفية استخدام الأدوات التقليدية في صناعة الفخار.',
-    duration: '4 أسابيع',
-  },
-  {
-    id: 2,
-    title: 'دورة التصميم الحديث في الفخار',
-    description: 'تعلم كيفية تصميم الفخار بطرق مبتكرة تتماشى مع الاتجاهات الحديثة.',
-    duration: '6 أسابيع',
-  },
-  {
-    id: 3,
-    title: 'دورة الاستدامة في صناعة الفخار',
-    description: 'تعلم كيفية استخدام مواد صديقة للبيئة وتقنيات مستدامة.',
-    duration: '3 أسابيع',
-  }
-];
+
+  const showUnderConstructionMessage = () => {
+    toast.info('🚧 نحن نعمل على تطوير الموقع! قريباً سيكون جاهزاً لتجربتك المميزة. شكرًا لصبرك! 🙏', {
+      position: "top-center",
+      autoClose: 4000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      transition: Slide,
+    });
+  };
+
   return (
     <div className="bg">
-    <div className="home-container">
-      <div className="welcome-message">
-        <h1>مرحبًا بكم في  منصتكم الرقمية الشاملة لدعم وتمكين الحرفيين في صناعة الفخار بصعيد مصر</h1>
-        <WelcomeMessage />
-      </div>
-
-      <div className='home-section'>
-        {/* عرض المنتجات */}
-        <section className="sectionProdact" ref={el => sectionRefs.current[1] = el}>
-          <ProductsList products={products} /> {/* استدعاء مكون ProductsList */}
-        </section>
-      </div>
-    <ServicesSection/>
-    <section >
+      <div className="home-container">
+        <h1 className="title">مرحبًا بكم في منصتكم الرقمية</h1>
+        <div className="welcome-message">
+          <h1>منصة لدعم وتمكين الحرفيين في صناعة الفخار بصعيد مصر</h1>
+          <WelcomeMessage />
+        </div>
+        <section className="home-section-u">
           <h2>ماذا نقدم؟</h2>
-          <ul>
-            <li>منصة شاملة: نحن نقدم منصة رقمية متكاملة تجمع بين الحرفيين، المستهلكين، والمستثمرين...</li>
-            <li>ورش عمل ودورات تدريبية: نقدم ورش عمل ودورات تدريبية تهدف إلى تطوير المهارات الفنية والإدارية للحرفيين...</li>
-            <li>منصة تجارة إلكترونية: سيتم إنشاء متجر إلكتروني متكامل يتيح للحرفيين بيع منتجاتهم الفخارية...</li>
-            <li>تعاون مع مؤسسات سياحية: بالتعاون مع المؤسسات السياحية في الأقصر وأسوان...</li>
-          </ul>
-        </section>
-      {/* عرض الكورسات */}
-      <section className="section-courses" ref={el => sectionRefs.current[1] = el}>
-          <h2>الكورسات المقدمة في تطوير صناعة الفخار</h2>
-          <CoursesList courses={courses} /> {/* استدعاء مكون CoursesList */}
-        </section>
-      
-
-        <section className="section" ref={el => sectionRefs.current[2] = el}>
-          <h2>التنمية المستدامة في صناعة الفخار</h2>
-          <ul>
-            <li>استخدام المواد المحلية: نشجع الحرفيين على استخدام المواد الطبيعية والمحلية...</li>
-            <li>التقنيات الصديقة للبيئة: نقدم ورش عمل تتعلق بالتقنيات الحديثة في صناعة الفخار...</li>
-            <li>تعليم الحرفيين: نعمل على تعليم الحرفيين أهمية الممارسات المستدامة...</li>
-          </ul>
+          <div className="content-container">
+            <ul className="content-li">
+              <li>منصة شاملة: نحن نقدم منصة رقمية متكاملة تجمع بين الحرفيين، المستهلكين، والمستثمرين</li>
+              <li>ورش عمل ودورات تدريبية: نقدم ورش عمل ودورات تدريبية تهدف إلى تطوير المهارات الفنية والإدارية للحرفيين</li>
+              <li>منصة تجارة إلكترونية: سيتم إنشاء متجر إلكتروني متكامل يتيح للحرفيين بيع منتجاتهم الفخارية</li>
+              <li>تعاون مع مؤسسات سياحية: بالتعاون مع المؤسسات السياحية في الأقصر وأسوان</li>
+            </ul>
+            <div className="image-container">
+              <img src={img4} alt="tanmea mostdama" className='image4'/>
+            </div>
+          </div>
         </section>
 
-        <section className="section" ref={el => sectionRefs.current[3] = el}>
-          <h2>حلول لتحديات الحرفيين</h2>
-          <ul>
-            <li>تقديم ورش عمل محلية: ستوفر المنصة ورش عمل مستمرة لتحسين مهارات الحرفيين...</li>
-            <li>دعم الشباب: ستمكن المنصة الشباب في المناطق النائية من الوصول إلى التعليم والتدريب...</li>
-          </ul>
-        </section>
+        <ServicesSection />
 
-        <section className="section" ref={el => sectionRefs.current[4] = el}>
-          <h2>الابتكار والتطوير</h2>
-          <ul>
-            <li>تشجيع الحرفيين على الابتكار وتطوير تصاميم جديدة...</li>
-            <li>تنظيم مسابقات لتصميم منتجات جديدة وتعزيز الروح الإبداعية...</li>
-            <li>تقديم استشارات في إدارة الأعمال لتحسين الكفاءة...</li>
-            <li>استخدام تقنيات التخطيط والتنظيم لتحديد أولويات العمل...</li>
-          </ul>
-        </section>
+        <ProductsSection
+          products={products}
+          sectionRef={el => sectionRefs.current[0] = el}
+          onProductClick={showUnderConstructionMessage}
+        />
 
-        <section className="section" ref={el => sectionRefs.current[5] = el}>
-          <h2>قصص نجاح</h2>
-          <ul>
-            <li>تسليط الضوء على قصص النجاح لبعض الحرفيين...</li>
-            <li>الفائدة منها: إلهام الحرفيين الجدد وتعزيز الإيجابية في المجتمع...</li>
-          </ul>
-        </section>
+        <SustainabilitySection sectionRef={el => sectionRefs.current[2] = el} />
+        <InnovationSection sectionRef={el => sectionRefs.current[3] = el} />
+        <SuccessStoriesSection sectionRef={el => sectionRefs.current[4] = el} />
+        <ChallengesSection sectionRef={el => sectionRefs.current[5] = el} />
+      </div>
 
-        <section className="section" ref={el => sectionRefs.current[6] = el}>
-          <h2>المشكلة التي تحلها الفكرة</h2>
-          <ul>
-            <li>تحسين الوصول إلى التدريب الحديث، وتعزيز الإنتاج الصديق للبيئة...</li>
-          </ul>
-        </section>
-    </div>
+      <ToastContainer />
     </div>
   );
 };

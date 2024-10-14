@@ -1,0 +1,139 @@
+/* بطاقة المنتج */
+.product-card {
+  padding: 20px;
+  width: 365px;
+  height: 400px;
+  margin: 10px;
+  border-radius: 10px;
+  background: linear-gradient(145deg, #f9f9f9, #e0e0e0); /* خلفية متدرجة */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* إضافة تأثير ظل */
+  text-align: center;
+  text-decoration: none; /* إزالة الخط تحت النص */
+  color: black;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* تأثير الانتقال */
+}
+
+/* لون العنوان */
+.product-card h3 {
+  color: #D2691E;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+/* صورة المنتج */
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain; /* للحفاظ على تناسق الصور */
+  border-radius: 10px;
+  transition: transform 0.3s ease; /* تأثير عند التمرير */
+}
+
+/* تأثير عند التمرير */
+.product-card:hover {
+  transform: translateY(-5px); /* رفع البطاقة عند التمرير */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* تأثير ظل أكبر */
+}
+
+.product-card:hover img {
+  transform: scale(1.05); /* تكبير الصورة عند التمرير */
+}
+
+/* الشبكة لعرض المنتجات */
+.products-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* قسم المنتجات */
+.sectionProdact {
+  margin-top: 30px;
+}
+
+/* قائمة المنتجات */
+.products-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-around;
+}
+
+/* عنصر المنتج */
+.product-item {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 200px;
+}
+
+/* صورة المنتج داخل العنصر */
+.product-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none; /* إزالة الخط تحت الروابط */
+}
+
+.product-card:hover {
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* تأثير ظل عند التمرير */
+  cursor: pointer;
+}
+
+/* زر "شراء الآن" */
+.buy-now-btn {
+  background-color: #ff5722; /* لون الخلفية */
+  color: white; /* لون النص */
+  padding: 10px 20px; /* padding حول الزر */
+  border: none; /* إزالة الحدود */
+  border-radius: 5px; /* زوايا دائرية */
+  cursor: pointer; /* تغيير المؤشر عند التمرير فوق الزر */
+  font-size: 16px; /* حجم الخط */
+  margin-top: 10px; /* مسافة فوق الزر */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* تأثير عند التمرير */
+}
+
+/* تأثير الزر عند التمرير */
+.buy-now-btn:hover {
+  background-color: #e64a19; /* تغيير لون الخلفية عند التمرير */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* إضافة ظل خفيف */
+  transform: translateY(-3px); /* تحريك الزر لأعلى قليلاً */
+}
+
+/* استعلامات الوسائط للشاشات المتوسطة */
+@media (max-width: 1200px) {
+  .product-card {
+    width: 45%; /* تقليل عرض البطاقات */
+  }
+}
+
+/* استعلامات الوسائط للشاشات الصغيرة (الهواتف) */
+@media (max-width: 768px) {
+  .product-card {
+    margin-bottom: 20px; /* مسافة بين المنتجات */
+    text-align: center;
+    font-size: small;
+    width: 90%; /* تقليل العرض للشاشات الصغيرة */
+  }
+  
+  .product-card img {
+    width: 100%;
+    height: 180px;
+    border-radius: 10px;
+  }
+  
+  .products-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* عرض المنتجات واحدًا تلو الآخر */
+  }
+  
+  .sectionProdact {
+    margin-top: 0px;
+  }
+}

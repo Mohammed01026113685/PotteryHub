@@ -1,7 +1,7 @@
 // src/components/LazyLoading.js
 import React, { useEffect, useState } from 'react';
 import logo from '../components/images/home/Pottery Hub logo with a transparent background.png';
-import './LazyLoading.css'; // تأكد من استيراد ملف CSS
+import '../components/css/LazyLoading.css'; // تأكد من استيراد ملف CSS
 
 const LazyLoading = ({ children }) => {
   const [isLoading, setIsLoading] = useState(true);

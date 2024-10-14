@@ -1,0 +1,108 @@
+/* Support.css */
+
+body {
+  background-color: #f8f9fa; /* خلفية فاتحة */
+  font-family: 'Arial', sans-serif; /* نوع الخط */
+}
+
+h1, h2 {
+  color: #343a40; /* لون العنوان */
+  margin-bottom: 20px;
+}
+
+
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.header {
+  padding: 40px; /* زيادة الحشو */
+  border-radius: 12px;
+  background-image: url('../images/home/te.webp');
+  background-size: cover; /* تغطي الخلفية كامل الصفحة */
+  background-position: center; /* مركزة في المنتصف */
+  background-repeat: no-repeat; /* لا تكرر الخلفية */
+  height: 70vh;   
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white; /* لون النص في الهيدر */
+}
+
+.header h1 {
+  font-size: 3em; /* حجم أكبر */
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.header p {
+  font-size: 1.3em; /* حجم خط أكبر */
+  margin-top: 10px;
+}
+
+.signup-button {
+  background-color: #8b5e3c;
+  color: white;
+  padding: 12px 25px; /* حشو أكبر */
+  border: none;
+  border-radius: 6px; /* زوايا دائرية أكبر */
+  cursor: pointer;
+  font-size: 1.1em; /* حجم خط أكبر */
+  transition: background-color 0.3s; /* تأثير عند التحويم */
+  margin-top: 10px; /* مسافة أعلى الزر */
+}
+
+.signup-button:hover {
+  background-color: #7a4c30;
+}
+
+.courses-section {
+  margin-top: 60px; /* زيادة المسافة العلوية */
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* عرض ورشات بأحجام مختلفة */
+  gap: 30px; /* زيادة الفجوة */
+  max-width: 1200px;
+  margin: 0 auto; /* توسيط الشبكة */
+}
+
+.course {
+  border-radius: 12px; /* زوايا دائرية */
+  overflow: hidden; /* إخفاء الزوايا الزائدة */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* إضافة ظل */
+  transition: transform 0.3s; /* تأثيرات عند التحويم */
+}
+
+.course:hover {
+  transform: scale(1.02); /* تكبير عند التحويم */
+}
+
+.course img {
+  width: 100%; /* عرض كامل */
+  height: 200px; /* ضبط الارتفاع */
+  object-fit: cover; /* الحفاظ على نسبة العرض والارتفاع */
+}
+
+.course-info {
+  padding: 15px; /* تقليل الحشو الداخلي */
+  text-align: center; /* محاذاة النص في المنتصف */
+  background-color: rgba(255, 255, 255, 0.9); /* خلفية بيضاء مع شفافية */
+  border-radius: 0 0 12px 12px; /* زوايا دائرية في الأسفل فقط */
+}
+
+.course-info h3 {
+  font-size: 1.4em; /* حجم خط معقول */
+  margin-bottom: 5px; /* تباعد بسيط */
+  color: #8b5e3c;
+}
+
+.course-info p {
+  font-size: 0.9em; /* حجم خط أصغر قليلاً */
+  margin-bottom: 15px; /* تباعد بسيط */
+  color: #666;
+}

@@ -1,14 +1,25 @@
 // ProductsList.js
 import React from 'react';
-import ProductCard from './ProductCard'; // استدعاء مكون ProductCard
-import './ProductCard.css'; // يمكنك إضافة تنسيق خاص للمنتجات هنا
 
-
-const ProductsList = ({ products }) => {
+const ProductsList = ({ products, onProductClick }) => {
   return (
     <div className="products-grid">
       {products.map((product) => (
-        <ProductCard key={product.id} product={product} />
+        <div key={product.id} className="product-card">
+          <img src={product.image} alt={product.name} />
+          <h3>{product.name}</h3>
+          <p>{product.description}</p>
+          <p>{product.price}</p>
+          <button
+            className="buy-now-btn"
+            onClick={(e) => {
+              e.stopPropagation(); // لمنع استدعاء onProductClick مرتين عند الضغط على البطاقة
+              onProductClick(); // استدعاء دالة onProductClick عند الضغط على الزر
+            }}
+          >
+            شراء الآن
+          </button>
+        </div>
       ))}
     </div>
   );

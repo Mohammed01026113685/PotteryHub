@@ -1,0 +1,43 @@
+body {
+  font-family: 'Cairo', sans-serif;
+  padding: 0;
+  text-align: right;
+  direction: rtl;
+  margin: 0; /* إزالة الهامش الافتراضي */
+  color: #333; /* لون النص */
+}
+
+
+.navbar {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* إضافة ظل خفيف */
+  padding: 10px 15px; /* تقليل الحشوة */
+}
+
+.logo {
+  height: 50px; /* يمكنك تعديل الحجم حسب الحاجة */
+  width: auto; /* الحفاظ على نسبة العرض إلى الارتفاع */
+}
+
+nav-link {
+  padding: 10px 15px; /* زيادة الحشوة حول الروابط */
+  transition: background-color 0.3s, color 0.3s, transform 0.3s; /* تأثير تفاعلي عند التمرير */
+}
+
+/* تأثير hover */
+.nav-link:hover {
+  background-color: #b75d20; /* تغيير لون الخلفية عند التمرير */
+  color: #ffffff; /* تغيير لون النص عند التمرير */
+  border-radius: 5px; /* جعل الزوايا مدورة */
+  transform: scale(1.1); /* تكبير الرابط عند التمرير */
+}
+
+/* استعلامات الوسائط للشاشات الصغيرة */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 5px; /* تقليل الحشوة في الشاشات الصغيرة */
+  }
+
+  .logo {
+    height: 40px; /* تقليل حجم الشعار في الشاشات الصغيرة */
+  }
+}
