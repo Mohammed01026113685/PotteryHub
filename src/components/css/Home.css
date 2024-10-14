@@ -193,13 +193,14 @@ nav a:hover {
 /* استعلامات الوسائط للشاشات الصغيرة جدًا */
 @media (max-width: 480px) {
     .welcome-message {
-        margin-top: 165px;
+        margin-top: 50px;
         font-size: 18px;
     }
 
     .welcome-message h1 {
         font-size: 1.2em;
-        margin-top: auto;
+        /* margin-top: -20px; */
+        
     }
 
 
@@ -209,6 +210,8 @@ nav a:hover {
 
     .title {
         font-size: 1.8em;
+        margin-top: auto;
+        width: max-content;
     }
 
     nav ul {
